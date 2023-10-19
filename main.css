@@ -1,0 +1,92 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #eee;
+}
+
+.toggle {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+    width: 16%;
+}
+
+.toggle > input {
+    display: none;
+}
+
+.toggle > label {
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 44px;
+    background: #d6a400;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.toggle > label:after {
+    position: absolute;
+    left: -2px;
+    top: -3px;
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 100px;
+    background: rgb(255, 196, 0);
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.05);
+    content: '';
+    transition: all 0.3s ease;
+}
+.toggle > label:active:after {
+    transform: scale(1.15, 0.85);
+}
+.toggle > input:checked ~ label {
+    background: #0027a8;
+}
+.toggle > input:checked ~ label:after {
+    left: 20px;
+    background: #0033db;
+}
+.toggle > input:disabled ~ label {
+    background: #ccad00;
+    pointer-events: none;
+}
+.toggle > input:disabled ~ label:after {
+    background: #ccb800;
+}
+
+.dark-mode {
+    background-color: #000;
+}
+
+.dark-mode .alterna {
+    color: #FFF;
+}
+
+.meuTitulo {
+    text-align: center;
+}
+
+.meuTexto {
+    text-align: left;
+    width: 48%;
+    font-size: 20px;
+}
+
+.containerTexto {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.imagem {
+    width: 48%;
+}
+
+.containerTexto .imagem img {
+    width: 100%;
+}
